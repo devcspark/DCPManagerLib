@@ -14,6 +14,7 @@
 		3CED8C8F215338E9002CFBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CED8C8D215338E9002CFBC3 /* LaunchScreen.storyboard */; };
 		3CED8C98215338F9002CFBC3 /* DCPLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED8C97215338F9002CFBC3 /* DCPLocationManager.swift */; };
 		3CED8C9A215339CC002CFBC3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED8C99215339CC002CFBC3 /* LocationViewController.swift */; };
+		3CED8C9C215386DC002CFBC3 /* DCPPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED8C9B215386DC002CFBC3 /* DCPPermissionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3CED8C90215338E9002CFBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CED8C97215338F9002CFBC3 /* DCPLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCPLocationManager.swift; sourceTree = "<group>"; };
 		3CED8C99215339CC002CFBC3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		3CED8C9B215386DC002CFBC3 /* DCPPermissionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCPPermissionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				3CED8C97215338F9002CFBC3 /* DCPLocationManager.swift */,
+				3CED8C9B215386DC002CFBC3 /* DCPPermissionManager.swift */,
 			);
 			name = DCPManagerLib;
 			path = ../../DCPManagerLib;
@@ -111,6 +114,7 @@
 				TargetAttributes = {
 					3CED8C80215338E8002CFBC3 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -151,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CED8C87215338E8002CFBC3 /* ViewController.swift in Sources */,
+				3CED8C9C215386DC002CFBC3 /* DCPPermissionManager.swift in Sources */,
 				3CED8C85215338E8002CFBC3 /* AppDelegate.swift in Sources */,
 				3CED8C98215338F9002CFBC3 /* DCPLocationManager.swift in Sources */,
 				3CED8C9A215339CC002CFBC3 /* LocationViewController.swift in Sources */,
@@ -230,13 +235,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -285,12 +291,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -308,7 +315,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devcspark.sample.DCPManagerLib-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -326,7 +333,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devcspark.sample.DCPManagerLib-sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
