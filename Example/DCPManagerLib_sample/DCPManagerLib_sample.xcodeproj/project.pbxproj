@@ -15,6 +15,7 @@
 		3CED8C98215338F9002CFBC3 /* DCPLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED8C97215338F9002CFBC3 /* DCPLocationManager.swift */; };
 		3CED8C9A215339CC002CFBC3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED8C99215339CC002CFBC3 /* LocationViewController.swift */; };
 		3CED8C9C215386DC002CFBC3 /* DCPPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CED8C9B215386DC002CFBC3 /* DCPPermissionManager.swift */; };
+		3CED8C9E21539582002CFBC3 /* DCPManagerLib.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 3CED8C9D21539582002CFBC3 /* DCPManagerLib.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3CED8C97215338F9002CFBC3 /* DCPLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCPLocationManager.swift; sourceTree = "<group>"; };
 		3CED8C99215339CC002CFBC3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		3CED8C9B215386DC002CFBC3 /* DCPPermissionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCPPermissionManager.swift; sourceTree = "<group>"; };
+		3CED8C9D21539582002CFBC3 /* DCPManagerLib.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = DCPManagerLib.podspec; path = ../../DCPManagerLib.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		3CED8C78215338E8002CFBC3 = {
 			isa = PBXGroup;
 			children = (
+				3CED8C9D21539582002CFBC3 /* DCPManagerLib.podspec */,
 				3CED8C96215338F9002CFBC3 /* DCPManagerLib */,
 				3CED8C83215338E8002CFBC3 /* DCPManagerLib_sample */,
 				3CED8C82215338E8002CFBC3 /* Products */,
@@ -143,6 +146,7 @@
 			files = (
 				3CED8C8F215338E9002CFBC3 /* LaunchScreen.storyboard in Resources */,
 				3CED8C8C215338E9002CFBC3 /* Assets.xcassets in Resources */,
+				3CED8C9E21539582002CFBC3 /* DCPManagerLib.podspec in Resources */,
 				3CED8C8A215338E8002CFBC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
