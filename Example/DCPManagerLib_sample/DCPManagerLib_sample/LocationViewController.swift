@@ -2,29 +2,30 @@
 //  LocationViewController.swift
 //  DCPManagerLib_sample
 //
-//  Created by ChunsooPark on 2018. 9. 19..
+//  Created by ChunsooPark on 2018. 9. 20..
 //  Copyright © 2018년 devcspark. All rights reserved.
 //
 
 import UIKit
+import MapKit
 
 class LocationViewController: UIViewController {
 
+    private var location:DCPLocationManager!
+    
+    @IBOutlet weak var map: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func pressedBack(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        
     }
     
-    @IBAction func pressedMyPosition(_ sender: UIButton) {
-        
-        DCPLocationManager.shared().getLocation()
-        
+    @IBAction func pressedMoveToMe(_ sender: UIButton) {
     }
     
     /*

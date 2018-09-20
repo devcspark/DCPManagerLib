@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqe-Mg-NwW">
-                                <rect key="frame" x="128" y="318.5" width="119" height="30"/>
-                                <state key="normal" title="LocationManager"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-en-yMk">
+                                <rect key="frame" x="144" y="318.5" width="87" height="30"/>
+                                <state key="normal" title="LocationTest"/>
                                 <connections>
-                                    <segue destination="xix-L8-VW4" kind="presentation" id="lcU-ch-vYs"/>
+                                    <segue destination="tpT-bZ-0EA" kind="presentation" id="XWq-kj-mqL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bqe-Mg-NwW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VWs-Pg-hrR"/>
-                            <constraint firstItem="bqe-Mg-NwW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yWP-sA-JcX"/>
+                            <constraint firstItem="hHI-en-yMk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LT8-DB-zIW"/>
+                            <constraint firstItem="hHI-en-yMk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdg-Lr-5Xk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,45 +37,52 @@
             </objects>
         </scene>
         <!--Location View Controller-->
-        <scene sceneID="NIe-VD-Tbw">
+        <scene sceneID="rqe-Lb-o3a">
             <objects>
-                <viewController id="xix-L8-VW4" customClass="LocationViewController" customModule="DCPManagerLib_sample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Cui-j8-LGe">
+                <viewController id="tpT-bZ-0EA" customClass="LocationViewController" customModule="DCPManagerLib_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ej-ik-eZu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-Ct-9tf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qu7-6V-8DW">
                                 <rect key="frame" x="16" y="20" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <action selector="pressedBack:" destination="xix-L8-VW4" eventType="touchUpInside" id="aco-fq-9OK"/>
+                                    <action selector="pressedBack:" destination="tpT-bZ-0EA" eventType="touchUpInside" id="Jvj-5P-Uya"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QSb-Qa-Ofl">
-                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmS-K6-wNn">
-                                <rect key="frame" x="283" y="20" width="76" height="30"/>
-                                <state key="normal" title="MyPosition"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-NG-2oP">
+                                <rect key="frame" x="278" y="20" width="81" height="30"/>
+                                <state key="normal" title="Move to me"/>
                                 <connections>
-                                    <action selector="pressedMyPosition:" destination="xix-L8-VW4" eventType="touchUpInside" id="RrH-ew-7bO"/>
+                                    <action selector="pressedMoveToMe:" destination="tpT-bZ-0EA" eventType="touchUpInside" id="gOC-8m-sv1"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RYm-sB-ACt">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DmS-K6-wNn" firstAttribute="top" secondItem="bbS-Jj-zpg" secondAttribute="top" id="MGp-yi-RhZ"/>
-                            <constraint firstItem="fpN-Ct-9tf" firstAttribute="top" secondItem="bbS-Jj-zpg" secondAttribute="top" id="MnP-gA-2eJ"/>
-                            <constraint firstItem="bbS-Jj-zpg" firstAttribute="trailing" secondItem="DmS-K6-wNn" secondAttribute="trailing" constant="16" id="aGQ-3S-SJ3"/>
-                            <constraint firstItem="fpN-Ct-9tf" firstAttribute="leading" secondItem="bbS-Jj-zpg" secondAttribute="leading" constant="16" id="lJq-9d-2Ao"/>
+                            <constraint firstItem="qu7-6V-8DW" firstAttribute="leading" secondItem="Hxb-r3-Dvc" secondAttribute="leading" constant="16" id="3lA-yc-JXN"/>
+                            <constraint firstItem="RYm-sB-ACt" firstAttribute="trailing" secondItem="Hxb-r3-Dvc" secondAttribute="trailing" id="EWl-VB-TD4"/>
+                            <constraint firstItem="B0N-NG-2oP" firstAttribute="top" secondItem="Hxb-r3-Dvc" secondAttribute="top" id="Eff-FM-Vjv"/>
+                            <constraint firstItem="RYm-sB-ACt" firstAttribute="leading" secondItem="Hxb-r3-Dvc" secondAttribute="leading" id="F3W-aP-4f7"/>
+                            <constraint firstItem="RYm-sB-ACt" firstAttribute="top" secondItem="qu7-6V-8DW" secondAttribute="bottom" constant="8" id="F4R-Ih-TnY"/>
+                            <constraint firstItem="qu7-6V-8DW" firstAttribute="top" secondItem="Hxb-r3-Dvc" secondAttribute="top" id="OYy-uF-wjq"/>
+                            <constraint firstItem="B0N-NG-2oP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qu7-6V-8DW" secondAttribute="trailing" constant="228" id="iAP-Qz-852"/>
+                            <constraint firstItem="RYm-sB-ACt" firstAttribute="bottom" secondItem="Hxb-r3-Dvc" secondAttribute="bottom" id="nes-Dz-FYe"/>
+                            <constraint firstItem="Hxb-r3-Dvc" firstAttribute="trailing" secondItem="B0N-NG-2oP" secondAttribute="trailing" constant="16" id="ryw-ip-Pil"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bbS-Jj-zpg"/>
+                        <viewLayoutGuide key="safeArea" id="Hxb-r3-Dvc"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="RYm-sB-ACt" id="kHm-6z-Jd9"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k1W-zq-IQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SzW-Rf-u3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="812" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1380" y="134"/>
         </scene>
     </scenes>
 </document>
