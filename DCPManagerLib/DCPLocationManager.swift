@@ -11,11 +11,13 @@ import CoreLocation
 
 class DCPLocationManager: NSObject, CLLocationManagerDelegate {
 
+    private var updateLocation : ((CLLocation)->Void)?
+    
     private static var _saredInstance : DCPLocationManager = {
         let pManager = DCPLocationManager()
         // 각종 초기화
         
-        pManager.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        pManager.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         pManager.locationManager.delegate = pManager
         
         return pManager
@@ -27,12 +29,30 @@ class DCPLocationManager: NSObject, CLLocationManagerDelegate {
     
     private var locationManager = CLLocationManager()
     private var location:CLLocation!
-
-    private var isLocationSearch = false
     
-    func getLocation() {
-        if !isLocationSearch {
-            
+    private var _isLocationSearch = false
+    var isLocationSearch : Bool {
+        get {
+            return _isLocationSearch
+        }
+        set(newValue){
+            _isLocationSearch = newValue
+            if newValue {
+                locationManager.requestWhenInUseAuthorization()
+            }else{
+                locationManager.stopUpdatingLocation()
+            }
+        }
+    }
+    
+    func getLocation(updateHandle:@escaping((CLLocation)->Void)) {
+        updateLocation = updateHandle
+        isLocationSearch = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if updateLocation != nil {
+            updateLocation!(locations.last!)
         }
     }
 }

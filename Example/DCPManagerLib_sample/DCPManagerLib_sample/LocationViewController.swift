@@ -10,8 +10,6 @@ import UIKit
 import MapKit
 
 class LocationViewController: UIViewController {
-
-    private var location:DCPLocationManager!
     
     @IBOutlet weak var map: MKMapView!
     
@@ -19,10 +17,15 @@ class LocationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        DCPLocationManager.shared().getLocation { [weak self](location) in
+            
+            self?.map.region = (self?.map.regionThatFits(MKCoordinateRegionMake(location.coordinate, MKCoordinateSpanMake(500, 500))))!
+            
+        }
     }
     
     @IBAction func pressedBack(_ sender: UIButton) {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func pressedMoveToMe(_ sender: UIButton) {
