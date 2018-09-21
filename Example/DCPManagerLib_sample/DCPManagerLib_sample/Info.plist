@@ -42,6 +42,12 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Will Test Location~</string>
+	<string>Will test location~</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Will test access photo library~</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Will test camera~</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Will test microphone~</string>
 </dict>
 </plist>

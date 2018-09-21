@@ -4,30 +4,64 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Permission Photo View Controller-->
+        <scene sceneID="sHy-OH-GTn">
+            <objects>
+                <viewController id="Gc4-KC-eGk" customClass="PermissionPhotoViewController" customModule="DCPManagerLib_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="83x-Q8-Muz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FOe-1l-xes"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YO3-lz-wX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="824"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DCPManagerLib_sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="DCPManagerLib_sample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHI-en-yMk">
-                                <rect key="frame" x="144" y="318.5" width="87" height="30"/>
+                                <rect key="frame" x="144" y="285" width="87" height="30"/>
                                 <state key="normal" title="LocationTest"/>
                                 <connections>
                                     <segue destination="tpT-bZ-0EA" kind="presentation" id="XWq-kj-mqL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPf-83-6FJ">
+                                <rect key="frame" x="109" y="345" width="157" height="30"/>
+                                <state key="normal" title="PermissionCameraTest"/>
+                                <connections>
+                                    <segue destination="hhp-8P-u4j" kind="presentation" id="kGU-ii-lbd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJj-Lg-SpD">
+                                <rect key="frame" x="116" y="405" width="143" height="30"/>
+                                <state key="normal" title="PermissionPhotoTest"/>
+                                <connections>
+                                    <segue destination="Gc4-KC-eGk" kind="presentation" id="SEe-NV-OP7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hHI-en-yMk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LT8-DB-zIW"/>
+                            <constraint firstItem="BJj-Lg-SpD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12z-KK-zVq"/>
+                            <constraint firstItem="nPf-83-6FJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JUH-00-bHz"/>
+                            <constraint firstItem="hHI-en-yMk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.9" id="LT8-DB-zIW"/>
+                            <constraint firstItem="BJj-Lg-SpD" firstAttribute="top" secondItem="nPf-83-6FJ" secondAttribute="bottom" constant="30" id="ggp-yx-5zW"/>
+                            <constraint firstItem="nPf-83-6FJ" firstAttribute="top" secondItem="hHI-en-yMk" secondAttribute="bottom" constant="30" id="ojq-Mk-p2i"/>
                             <constraint firstItem="hHI-en-yMk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rdg-Lr-5Xk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -35,6 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-358" y="112"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="rqe-Lb-o3a">
@@ -82,7 +117,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SzW-Rf-u3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380" y="134"/>
+            <point key="canvasLocation" x="486" y="-590"/>
+        </scene>
+        <!--Permission Camera View Controller-->
+        <scene sceneID="xeL-WI-WL4">
+            <objects>
+                <viewController id="hhp-8P-u4j" customClass="PermissionCameraViewController" customModule="DCPManagerLib_sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZX-x6-LuF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ebT-Ax-AVJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EF8-sx-pAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="486" y="112"/>
         </scene>
     </scenes>
 </document>
