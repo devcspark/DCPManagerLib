@@ -15,8 +15,7 @@ class DCPLocationManager: NSObject, CLLocationManagerDelegate {
     
     private static var _saredInstance : DCPLocationManager = {
         let pManager = DCPLocationManager()
-        // 각종 초기화
-        
+
         pManager.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         pManager.locationManager.distanceFilter = kCLDistanceFilterNone
         pManager.locationManager.delegate = pManager
@@ -46,12 +45,19 @@ class DCPLocationManager: NSObject, CLLocationManagerDelegate {
         }
     }
     
+    func changeSetting(accuracy:CLLocationAccuracy, distance:CLLocationDistance) {
+        isLocationSearch = false
+        locationManager.desiredAccuracy = accuracy
+        locationManager.distanceFilter = distance
+        isLocationSearch = true
+    }
+    
     func getLocation(updateHandle:@escaping((CLLocation)->Void)) {
         updateLocation = updateHandle
         locationManager.requestWhenInUseAuthorization()
     }
     
-    // CLLocationManagerDelegate 델리게이트 함수
+    // CLLocationManagerDelegate
     // Region start
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if updateLocation != nil {
@@ -60,11 +66,11 @@ class DCPLocationManager: NSObject, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("GPS Error => \(error.localizedDescription)")
+        print("error : [\(error.localizedDescription)]")
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        // 애플리케이션의 위치 추적 허가 상태가 변경될 경우 호출
+        // It is called when using authentication.
         if(status == .authorizedWhenInUse){
             isLocationSearch = true
         }
