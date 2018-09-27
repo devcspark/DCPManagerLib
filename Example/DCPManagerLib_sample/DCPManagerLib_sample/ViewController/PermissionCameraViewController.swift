@@ -7,16 +7,45 @@
 //
 
 import UIKit
+import AVKit
 
 class PermissionCameraViewController: UIViewController {
 
+    private var _deviceDiscoverySession : AVCaptureDevice.DiscoverySession?
+    private var deviceDiscoverySession : AVCaptureDevice.DiscoverySession! {
+        get{
+            return _deviceDiscoverySession ?? { () -> AVCaptureDevice.DiscoverySession? in
+                
+                _deviceDiscoverySession = .init(deviceTypes: [.builtInWideAngleCamera, .builtInMicrophone],
+                                                mediaType: AVMediaType.video,
+                                                position: .front)
+                
+                return _deviceDiscoverySession
+                
+                }()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         DCPPermissionManager.shared().CheckPermission(permission: [.Camera, .Microphone]) { (isAccess) in
-            
+            if isAccess {
+                
+            }else{
+                self.dismiss(animated: true, completion: nil)
+            }
         }
+    }
+    
+    // MARK: - Button action
+    @IBAction func pressedBack(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func pressedRecord(_ sender: UIButton) {
+        
     }
     
 
