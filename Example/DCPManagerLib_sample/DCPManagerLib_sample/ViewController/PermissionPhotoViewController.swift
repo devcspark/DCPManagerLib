@@ -66,6 +66,7 @@ class PermissionPhotoViewController: UIViewController, UICollectionViewDataSourc
     
     // MARK: - Button action
     @IBAction func pressedBack(_ sender: UIButton) {
+        PHPhotoLibrary.shared().unregisterChangeObserver(self)
         dismiss(animated: true, completion: nil)
     }
     
