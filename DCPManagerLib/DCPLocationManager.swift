@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class DCPLocationManager: NSObject, CLLocationManagerDelegate {
+public class DCPLocationManager: NSObject, CLLocationManagerDelegate {
 
     private var updateLocation : ((CLLocation)->Void)?
     

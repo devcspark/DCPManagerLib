@@ -11,14 +11,14 @@ import AVKit
 import Photos
 
 // supported permission is photo, camera, microphone
-enum DCPPermissionNeed: Int {
+public enum DCPPermissionNeed: Int {
     case Photo = 1
     case Camera
     case Microphone
 }
 
 
-class DCPPermissionManager: NSObject {
+public class DCPPermissionManager: NSObject {
 
     private enum ResultPermission: Int {
         case need_Permission = 1
