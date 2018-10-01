@@ -95,8 +95,8 @@ class PermissionCameraViewController: UIViewController, AVCaptureFileOutputRecor
                     do {
                         try device.lockForConfiguration()
                         // set to 20 frame.
-                        device.activeVideoMinFrameDuration = CMTimeMake(1, 20)
-                        device.activeVideoMaxFrameDuration = CMTimeMake(1, 20)
+                        device.activeVideoMinFrameDuration = CMTimeMake(1, 30)
+                        device.activeVideoMaxFrameDuration = CMTimeMake(1, 30)
                         device.unlockForConfiguration()
                         
                         if device.position == .front { // default is front.
