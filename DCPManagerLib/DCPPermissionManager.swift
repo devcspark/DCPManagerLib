@@ -11,7 +11,7 @@ import AVKit
 import Photos
 
 // supported permission is photo, camera, microphone
-enum VkinnyPermissionNeed: Int {
+enum DCPPermissionNeed: Int {
     case Photo = 1
     case Camera
     case Microphone
@@ -41,20 +41,20 @@ class DCPPermissionManager: NSObject {
         return sharedManager
     }
     
-    func CheckPermission(permission:[VkinnyPermissionNeed], complete:@escaping(Bool)->Void ) -> Void {
+    func CheckPermission(permission:[DCPPermissionNeed], complete:@escaping(Bool)->Void ) -> Void {
                 
         self.completeHandler = complete
         
         for permissionTemp in permission {
-            if (permissionTemp == VkinnyPermissionNeed.Photo ) {
+            if (permissionTemp == .Photo ) {
                 photoAuthorizeResult = .need_Permission
             }
             
-            if (permissionTemp == VkinnyPermissionNeed.Camera ) {
+            if (permissionTemp == .Camera ) {
                 cameraAuthorizeResult = .need_Permission
             }
             
-            if (permissionTemp == VkinnyPermissionNeed.Microphone ) {
+            if (permissionTemp == .Microphone ) {
                 micAuthorizeResult = .need_Permission
             }            
         }
