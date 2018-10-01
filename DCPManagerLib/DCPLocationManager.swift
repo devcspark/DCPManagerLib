@@ -59,17 +59,17 @@ public class DCPLocationManager: NSObject, CLLocationManagerDelegate {
     
     // CLLocationManagerDelegate
     // Region start
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    private func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if updateLocation != nil {
             updateLocation!(locations.last!)
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    private func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error : [\(error.localizedDescription)]")
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    private func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         // It is called when using authentication.
         if(status == .authorizedWhenInUse){
             isLocationSearch = true
