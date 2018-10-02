@@ -23,7 +23,7 @@ public class DCPLocationManager: NSObject, CLLocationManagerDelegate {
         return pManager
     }()
     
-    class func shared() -> DCPLocationManager {
+    public class func shared() -> DCPLocationManager {
         return _saredInstance
     }
     
@@ -31,7 +31,7 @@ public class DCPLocationManager: NSObject, CLLocationManagerDelegate {
     private var location:CLLocation!
     
     private var _isLocationSearch = false
-    var isLocationSearch : Bool {
+    public var isLocationSearch : Bool {
         get {
             return _isLocationSearch
         }
@@ -39,22 +39,29 @@ public class DCPLocationManager: NSObject, CLLocationManagerDelegate {
             _isLocationSearch = newValue
             if newValue {
                 locationManager.startUpdatingLocation()
+                if updateLocation != nil {
+                    updateLocation!(locationManager.location!)
+                }
             }else{
                 locationManager.stopUpdatingLocation()
             }
         }
     }
     
-    func changeSetting(accuracy:CLLocationAccuracy, distance:CLLocationDistance) {
+    public func changeSetting(accuracy:CLLocationAccuracy, distance:CLLocationDistance) {
         isLocationSearch = false
         locationManager.desiredAccuracy = accuracy
         locationManager.distanceFilter = distance
         isLocationSearch = true
     }
     
-    func getLocation(updateHandle:@escaping((CLLocation)->Void)) {
+    public func getLocation(updateHandle:@escaping((CLLocation)->Void)) {
         updateLocation = updateHandle
-        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            isLocationSearch = true
+        }else{
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
     
     // CLLocationManagerDelegate

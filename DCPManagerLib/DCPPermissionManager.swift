@@ -37,11 +37,11 @@ public class DCPPermissionManager: NSObject {
         return pManager
     }()
 
-    class func shared() -> DCPPermissionManager {
+    public class func shared() -> DCPPermissionManager {
         return sharedManager
     }
     
-    func CheckPermission(permission:[DCPPermissionNeed], complete:@escaping(Bool)->Void ) -> Void {
+    public func CheckPermission(permission:[DCPPermissionNeed], complete:@escaping(Bool)->Void ) -> Void {
                 
         self.completeHandler = complete
         
