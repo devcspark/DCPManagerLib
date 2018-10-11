@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DCPManagerLib'
   s.version          = '0.1.6'
-  s.summary          = 'DCPManagerLib is a library for simple use of CoreLocation API.'
+  s.summary          = 'DCPManagerLib is a library for simple use of CoreLocation API and Camera API.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = <<-DESC
 
-  DCPManagerLib is a library for simple use of CoreLocation API.
+  DCPManagerLib is a library for simple use of CoreLocation API and Camera API.
   And.. We will continue to add various APIs to make it easier to use.
 
                        DESC
