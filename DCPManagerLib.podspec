@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DCPManagerLib'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'DCPManagerLib is a library for simple use of CoreLocation API and Camera API.'
 
 # This description is used to generate tags and improve search results.
