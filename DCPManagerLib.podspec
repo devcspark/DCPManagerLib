@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DCPManagerLib'
-  s.version          = '0.1.5'
+  s.version          = '0.1.6'
   s.summary          = 'DCPManagerLib is a library for simple use of CoreLocation API.'
 
 # This description is used to generate tags and improve search results.
@@ -27,14 +27,12 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/devcspark/DCPManagerLib'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ChunsooPark' => 'devcspark@gmail.com' }
+  s.author           = { 'Devcspark' => 'devcspark@gmail.com' }
   s.source           = { :git => 'https://github.com/devcspark/DCPManagerLib.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'DCPManagerLib/**/*'
-  
+  s.ios.deployment_target = '10.0'
+  s.source_files = 'DCPManagerLib/Classes/**/*'
   s.swift_version = '4.0'
   
   # s.resource_bundles = {

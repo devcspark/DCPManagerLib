@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import DCPManagerLib
 
 class LocationViewController: UIViewController, MKMapViewDelegate {
     
@@ -38,11 +39,7 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
             }
         }
     }
-    
-    deinit {
-        print("deinit")
-    }
-    
+        
     @IBAction func pressedBack(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

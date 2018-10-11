@@ -1,0 +1,16 @@
+PODS:
+  - DCPManagerLib (0.1.6)
+
+DEPENDENCIES:
+  - DCPManagerLib (from `../`)
+
+EXTERNAL SOURCES:
+  DCPManagerLib:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DCPManagerLib: d17aae7610734b951528f5a20d3057d559677ffe
+
+PODFILE CHECKSUM: 29aea8e81f2e2f9d10afa495e3c070776971af69
+
+COCOAPODS: 1.5.3

@@ -8,6 +8,7 @@
 
 import UIKit
 import Photos
+import DCPManagerLib
 
 class miniPhotoCell: UICollectionViewCell {
     

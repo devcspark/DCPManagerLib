@@ -22,7 +22,7 @@ pod 'DCPManagerLib'
 
 ## Author
 
-ChunsooPark, devcspark@gmail.com
+ChunsooPark, chunsoo.park@cs.vkinny.com
 
 ## License
 
